@@ -33,22 +33,12 @@ def index():
   
     return render_template("index.html")
 
-
-#-------------------------- BOT --------------------------#
-#-------------------------- BOT --------------------------#
-#-------------------------- BOT --------------------------#
-
-'''def get_url():
-    contents = requests.get('https://thatcopy.pw/catapi/rest/').json()
-    image_url = contents['url']
-    return image_url'''
-
 #Opção de fotos das decorações
 def finalidades(mensagem):
-    imagens = {'HomeOffice': ['https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg', 'https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg'],
-                'Sala': ['https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg', 'https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg'],
-                'Suite': ['https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg', 'https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg'],
-                'Quarto': ['https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg', 'https://thatcopy.github.io/catAPI/imgs/jpg/96aff96.jpg']
+    imagens = {'HomeOffice': ['https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/homeoffice1.jpg', 'https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/homeoffice2.png'],
+                'Sala': ['https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/sala1.jpg', 'https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/sala2.jpg'],
+                'Suite': ['https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/suite1.jpg', 'https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/suite2.jpg'],
+                'Quarto': ['https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/quarto1.jpg', 'https://raw.githubusercontent.com/gabrielmotroni-prog/DecorStadiaBot/main/app/images/quarto2.jpg']
                 }
     if mensagem.text == '/HomeOffice':
         #bot.send_photo(mensagem.chat.id, imagens['HomeOffice'][0])
@@ -64,8 +54,6 @@ def finalidades(mensagem):
     elif mensagem.text == '/Quarto':
         bot.send_photo(mensagem.chat.id, imagens['Quarto'][0])
         bot.send_photo(mensagem.chat.id, imagens['Quarto'][1])
-  
-
 
 
 @bot.message_handler(func=finalidades)
